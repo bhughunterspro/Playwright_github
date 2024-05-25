@@ -1,13 +1,14 @@
 name: Playwright Tests
 on:
-workflow_dispatch:
-schedule:
+  workflow_dispatch:
+  schedule:
     - cron: '0 9 * * 1-5'
     - cron: '0 15 * * 1-5'
   push:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+    
 jobs:
   test:
     timeout-minutes: 60
